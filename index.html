@@ -1,1 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">Expense Tracker</h1>
+
+    <section class="summary">
+      <div class="card">
+        <h3>Balance</h3>
+        <p id="balance" class="big">₹0.00</p>
+      </div>
+
+      <div class="card row">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus">₹0.00</p>
+        </div>
+        <div>
+          <h4>Expenses</h4>
+          <p id="money-minus">₹0.00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="add-transaction card">
+      <h3>Add New Transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Description</label>
+          <input type="text" id="text" placeholder="e.g., Salary, Coffee" required />
+        </div>
+        <div class="form-control two-col">
+          <div>
+            <label for="amount">Amount</label>
+            <input type="number" step="0.01" id="amount" placeholder="e.g., 2500 or -50" required />
+          </div>
+          <div>
+            <label for="type">Type</label>
+            <select id="type">
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="history card">
+      <h3>History</h3>
+      <ul id="list" class="list"></ul>
+    </section>
+
+    <footer class="footer">
+      <small>Built with ♥ — Data saved locally in your browser</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
